@@ -16,7 +16,6 @@ bool OdczytajParametry(int argc, char **argv, Parametry& par)
 		else if (argv[i] == param_m)
 			par.sciezka_mapa = argv[++i];
 	}
-
 	if (par.sciezka_dane == "" || par.sciezka_mapa == "" || par.sciezka_wyj == "")
 		return false;
 	return true;
