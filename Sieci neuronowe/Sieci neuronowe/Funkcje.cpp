@@ -47,16 +47,24 @@ void Siec_neuronowa(const Parametry& par)
 	//double ** tab_mapa = new double *[i];
 	stringstream stream;
 	string bufor;
-	int ilosc_warstw = 0;
+	int ilosc_warstw = 1;
+	int bufor_neuronow = 1;
 	while (!mapa.eof())
 	{
 		getline(mapa, bufor);
 		if (bufor != "")
+		{
+			bufor_neuronow++;
+			stream << bufor << " \n";
+		}
+		else if (bufor == "")
+		{
+			getline(mapa, bufor);
 			ilosc_warstw++;
-		stream << bufor << " \n";
+		}
 	}
-	cout << ilosc_warstw;
-	cout << stream.str();
+	cout << ilosc_warstw << endl;
+	cout << bufor_neuronow << endl;
 }
 
 //void OdczytajNeuron(std::string &bufor, std::stringstream &stream, std::ifstream &mapa, int i)
