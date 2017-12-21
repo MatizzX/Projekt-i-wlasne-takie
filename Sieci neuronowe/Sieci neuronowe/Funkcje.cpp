@@ -59,12 +59,20 @@ void Siec_neuronowa(const Parametry& par)
 		}
 		else if (bufor == "")
 		{
+			double** tablica_wag_warstwy = new double* [bufor_neuronow];
+			Zapisz_warstwe(stream, tablica_wag_warstwy);
 			getline(mapa, bufor);
 			ilosc_warstw++;
+			stream << " x ";
 		}
 	}
 	cout << ilosc_warstw << endl;
 	cout << bufor_neuronow << endl;
+}
+
+void Zapisz_warstwe(std::stringstream &stream, double** tablica_wag_warstwy)
+{
+
 }
 
 //void OdczytajNeuron(std::string &bufor, std::stringstream &stream, std::ifstream &mapa, int i)

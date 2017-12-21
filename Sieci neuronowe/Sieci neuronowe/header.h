@@ -12,4 +12,5 @@ struct Parametry
 
 bool OdczytajParametry(int argc, char **argv, Parametry& par);
 void Siec_neuronowa(const Parametry& par);
-void OdczytajNeuron(std::string &bufor, std::stringstream &stream, std::ifstream &mapa, int i);
+//void OdczytajNeuron(std::string &bufor, std::stringstream &stream, std::ifstream &mapa, int i);
+void Zapisz_warstwe(std::stringstream &stream, double** tablica_wag_warstwy);
