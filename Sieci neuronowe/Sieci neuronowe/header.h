@@ -4,6 +4,17 @@
 #include<iostream>
 #include<sstream>
 
+struct Lista_warstw
+{
+	Lista_warstwy warstwa;
+	Lista_warstw* next;
+};
+
+struct Lista_warstwy
+{
+	double waga;
+	Lista_warstwy* next;
+};
 
 struct Parametry
 {

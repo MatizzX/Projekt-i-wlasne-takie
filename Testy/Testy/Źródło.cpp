@@ -1,14 +1,6 @@
-#include <iostream>
-#include <sstream>
-#include <string>
+#include "Header.h"
+
 int main()
 {
-
-	std::stringstream strumien;
-
-	strumien << "Napis\n" << 123 << " :)";
-	std::string sTekst = strumien.str();
-
-	std::cout << sTekst;
-	return 0;
+	int n = 10;
 }

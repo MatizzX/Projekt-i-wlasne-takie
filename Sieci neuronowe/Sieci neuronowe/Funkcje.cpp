@@ -68,6 +68,7 @@ void Siec_neuronowa(const Parametry& par)
 	}
 	cout << ilosc_warstw << endl;
 	cout << bufor_neuronow << endl;
+	
 }
 
 void Zapisz_warstwe(std::stringstream &stream, double** tablica_wag_warstwy)
