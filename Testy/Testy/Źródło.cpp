@@ -2,5 +2,6 @@
 
 int main()
 {
-	int n = 10;
+	generuj();
+	return 0;
 }
