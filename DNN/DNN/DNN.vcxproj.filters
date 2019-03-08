@@ -13,10 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Output">
+      <UniqueIdentifier>{b7518ab5-0960-4436-b82f-3dcebd7f7b61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Utils">
+      <UniqueIdentifier>{19de3030-47c7-416f-8771-862228ae0326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Optimizer">
+      <UniqueIdentifier>{0615a99f-9a08-4ce5-a292-23d590414bce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Activation">
+      <UniqueIdentifier>{6809b27e-0740-49ae-958d-02935ee5cd8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Layer">
+      <UniqueIdentifier>{07595c48-3e18-4caa-8838-30b262b65ca5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DNN.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="NeuralNet.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Optimizer.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Output.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="RNG.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
