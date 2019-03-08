@@ -8,9 +8,9 @@
 void generuj();
 int modInverse(int a, int m); //odwrotnosc modulo liczby
 int gcdExtended(int a, int b, int *x, int *y); //rozszerzony algorytm Euklidesa
-int convertToASCII(std::string letter, int* tablica);
+int convertToASCII(std::string letter, int* tablica); //funkcja zamieniajaca litery na cyfry wedle tablicy ASCII
 
-template <typename Number> //najwiekszy wspolny dzielnik
+template <typename Number> //funkcja znajdujaca najwiekszy wspolny dzielnik
 Number GCD(Number u, Number v) {
 	while (v != 0) {
 		Number r = u % v;

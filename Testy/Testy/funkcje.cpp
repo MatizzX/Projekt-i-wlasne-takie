@@ -2,26 +2,27 @@
 
 void generuj()
 {
-	uint64_t p = 30871;
-	uint64_t q = 31333;
-	uint64_t n = p * q;
-	uint64_t euler = (p - 1)*(q - 1);
+	uint64_t p = 30871;	    //para liczb
+	uint64_t q = 31333; 	//pierwszych
+	uint64_t n = p * q;     //czesc obu kluczy
+	uint64_t euler = (p - 1)*(q - 1);	  //funkcja phi Eulera
 	uint64_t e = NULL;
 	uint64_t d = NULL;
 	std::string tekst;
 
-	while (GCD(euler, e) != 1)
+	while (GCD(euler, e) != 1) //znajdywanie e (czesci klucza publicznego)
 	{
 		srand(time(0));
 		e = (rand() % euler) + 2;
 	}
 
-	d = modInverse(e, euler);
+	d = modInverse(e, euler); //obliczanie d (czesci klucza prywatnego)
 
 	std::cout << "Klucz publiczny: (" << n << ", " << e << ")" << std::endl;
 	std::cout << "Klucz prywatny: (" << n << ", " << d << ")" << std::endl;
 	std::cout << "Wpisz wiadomosc do zakodowania:" << std::endl;
 	std::getline(std::cin, tekst);
+
 	int wielkosc = tekst.length();
 	int *tablica = new int[wielkosc];
 	int *zakodowane = new int[wielkosc];
