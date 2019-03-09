@@ -56,5 +56,17 @@
     <ClInclude Include="RNG.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="Layer\FullyConnected.h">
+      <Filter>Pliki nagłówkowe\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer\Convolutional.h">
+      <Filter>Pliki nagłówkowe\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer\Pooling.h">
+      <Filter>Pliki nagłówkowe\Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Random.h">
+      <Filter>Pliki nagłówkowe\Utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
