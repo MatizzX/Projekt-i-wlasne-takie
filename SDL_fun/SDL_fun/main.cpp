@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <SDL.h>
 #include <SDL_main.h>
 #include <Windows.h>
@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
 	SDL_Rect blue = { 100, 500, 100, 100 };
 	SDL_Rect green = { 200, 500, 100, 100 };
 	start(renderer, red, blue, green);
-	while(IsRunning)
+
+	while (IsRunning)
 	{
 		while (SDL_PollEvent(&event) != 0)
 		{
@@ -36,50 +37,43 @@ int main(int argc, char *argv[])
 					{
 						case(SDLK_ESCAPE):
 						{
-							IsRunning = 0;
 							std::cout << "esc\n";
+							IsRunning = 0;
+							break;
 						}
 					}
+					break;
 				}
 
 				case (SDL_MOUSEBUTTONDOWN):
 				{
-					if (IsRunning == 0)
-						break;
-					while (IsRunning)
+					if (event.button.x > 0  && event.button.x <= 100 && event.button.y >= 500 && event.button.y <= 600)
+						SDL_SetRenderDrawColor(renderer, 255, 0, 0, 0);
+					if (event.button.x > 100 && event.button.x <= 200 && event.button.y >= 500 && event.button.y <= 600)
+						SDL_SetRenderDrawColor(renderer, 0, 255, 0, 0);
+					if (event.button.x > 200 && event.button.x <= 300 && event.button.y >= 500 && event.button.y <= 600)
+						SDL_SetRenderDrawColor(renderer, 0, 0, 255, 0);
+					while (1)
 					{
 						SDL_PollEvent(&event);
-						if (event.button.x <= 100 && event.button.y >= 500)
-							SDL_SetRenderDrawColor(renderer, 255, 0, 0, 0);
-						if (event.button.x > 100 && event.button.x <= 200 && event.button.y >= 500)
-							SDL_SetRenderDrawColor(renderer, 0, 255, 0, 0);
-						if (event.button.x > 200 && event.button.x <= 300 && event.button.y >= 500)
-							SDL_SetRenderDrawColor(renderer, 0, 0, 255, 0);
-						if (event.key.keysym.sym == SDLK_ESCAPE || event.type == SDL_QUIT)
-						{
-							IsRunning = 0;
-						}
-						if (event.type == SDL_MOUSEBUTTONDOWN)
-						{
-							while (IsRunning)
-							{
-								SDL_PollEvent(&event);
-								if (event.type == SDL_MOUSEBUTTONUP)
-									break;
-								SDL_RenderDrawPoint(renderer, event.button.x, event.button.y);
-								SDL_RenderPresent(renderer);
-							}
-						}
+						if (event.type == SDL_MOUSEBUTTONUP)
+							break;
+						SDL_RenderDrawPoint(renderer, event.button.x, event.button.y);
+						SDL_RenderPresent(renderer);
 					}
+					break;
+				}
+
+				case (SDL_QUIT):
+				{
+					std::cout << "X\n";
+					IsRunning = 0;
+					break;
 				}
 			}
-		}	
-
-		if (IsRunning == 0) 
-			break;
-		else if (event.type == SDL_QUIT)
-				break;
+		}
 	}
+
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 	SDL_Quit();
